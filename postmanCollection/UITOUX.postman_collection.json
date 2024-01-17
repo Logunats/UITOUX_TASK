@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "6733082e-55f9-4d95-b443-6b3f7f6130ed",
+		"name": "UITOUX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14665355"
+	},
+	"item": [
+		{
+			"name": "SIGN UP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@mail.com\",\r\n    \"firstName\":\"Test\",\r\n    \"lastName\": \"User\",\r\n    \"mobile\": \"9876543210\",\r\n    \"password\": \"uitoux@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/auth/signup",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@mail.com\",\r\n    \"password\": \"uitoux@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/auth/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ACCESS TOKEN",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/auth/getAccessToken",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"auth",
+						"getAccessToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BANNER LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/product/bannerList",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"product",
+						"bannerList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BRAND LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/product/brandList",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"product",
+						"brandList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SLIDERS LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/product/sliderList",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"product",
+						"sliderList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRODUCT CATEGORY LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/product/categoryList",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"product",
+						"categoryList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NEWS LETTER SUBSCRIBE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@mail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/product/subscribe",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"product",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRODUCT LIST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start\": 0,\r\n    \"length\": 10,\r\n    \"categoryId\": \"65a7396f95765bd539b7c72b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/product/productList",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"product",
+						"productList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TOP PRODUCT LIST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filterType\": \"top_rated\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/product/topProductList",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"product",
+						"topProductList"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "TOP PRODUCT LIST",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filterType\": \"best_sellers (or) top_rated (or) special_offers\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/product/topProductList",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product",
+								"topProductList"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "SEARCH PRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"searchValue\": \"A43-44328-B\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/product/serachProduct",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"product",
+						"serachProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST CART PRODUCTS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/cart/getCart",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"cart",
+						"getCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD TO CART",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"totalPrice\": 589.00,\r\n    \"products\": [\r\n        {\r\n            \"productId\": \"65a7411f95765bd539c5e49b\",\r\n            \"quantity\": 1,\r\n            \"price\": 589\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/cart/updateCart",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"cart",
+						"updateCart"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{accessToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "accessToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmVzSW4iOiIxZCIsImN1c3RvbWVyRGF0YSI6eyJfaWQiOiI2NWE3Yzk3NzMzMjg5MGIzMDFlZGVhNTciLCJlbWFpbCI6InRlc3RAbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJUZXN0IiwibGFzdE5hbWUiOiJVc2VyIiwibW9iaWxlIjoiOTg3NjU0MzIxMCJ9LCJpYXQiOjE3MDU0OTUwMjN9.eimHiceGIO37fjXgDixWzxJQBviE0qxhJ-Wf0zygV-E",
+			"type": "string"
+		},
+		{
+			"key": "refreshToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmVzSW4iOiIxNWQiLCJjdXN0b21lckRhdGEiOnsiX2lkIjoiNjVhN2M5NzczMzI4OTBiMzAxZWRlYTU3IiwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwiZmlyc3ROYW1lIjoiVGVzdCIsImxhc3ROYW1lIjoiVXNlciIsIm1vYmlsZSI6Ijk4NzY1NDMyMTAifSwiaWF0IjoxNzA1NDk1MDIzfQ.y6k8wrL9QAeLNUZu0rhuTZvkQ1DnyRNVR4_5aASPUD4",
+			"type": "string"
+		}
+	]
+}
